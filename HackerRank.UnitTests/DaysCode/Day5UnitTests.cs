@@ -25,7 +25,6 @@ namespace HackerRank.UnitTests.DaysCode
             Assert.Equal("2 x 1 = 2\r\n", console.OutputMessages[0]);
             Assert.Equal("2 x 2 = 4\r\n", console.OutputMessages[1]);
             Assert.Equal("2 x 3 = 6\r\n", console.OutputMessages[2]);
-            //Assert.NotEqual("2 x 2 = 6\r\n", console.OutputMessages[2]);
         }
 
         [Theory]
