@@ -6,19 +6,19 @@ namespace HackerRank
 {
     public interface IConsole
     {
-        void Write(string message);
-        void WriteLine(string message);
+        void Write(object message);
+        void WriteLine(object message);
         string ReadLine();
     }
 
     public class ConsoleWrapper : IConsole
     {
-        public void Write(string message)
+        public void Write(object message)
         {
             Console.Write(message);
         }
 
-        public void WriteLine(string message)
+        public void WriteLine(object message)
         {
             Console.WriteLine(message);
         }

@@ -15,13 +15,13 @@ namespace HackerRank.UnitTests
             this.inputMessages = new Queue<object>(inputs);
         }
 
-        public void Write(string message)
+        public void Write(object message)
         {
             //Console.Write(message);
-            OutputMessages.Add(message);
+            OutputMessages.Add(message.ToString());
         }
 
-        public void WriteLine(string message)
+        public void WriteLine(object message)
         {
             //Console.WriteLine(message);
             OutputMessages.Add(message + "\r\n");
