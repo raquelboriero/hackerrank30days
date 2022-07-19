@@ -11,7 +11,7 @@ namespace HackerRank
         {
 
             
-            new Day9().Run();
+            new Day10().Run();
 
             //var day1 = new Day1();
             //day1.Run();
