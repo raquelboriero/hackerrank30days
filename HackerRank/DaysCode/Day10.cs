@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace HackerRank.DaysCode
@@ -27,26 +28,28 @@ namespace HackerRank.DaysCode
         public void Case01()
         {
 
-            var numberBase10 = Convert.ToInt32(this.console.ReadLine().Trim());
-            var numberBinary = Convert.ToString(numberBase10, 2);
-            numberBinary = numberBinary.Substring(0, numberBinary.Length);
-
+            var numberBase10 = Convert.ToInt32(this.console.ReadLine().Trim());            
+            var binaryNumbers = Convert.ToString(numberBase10, 2);
 
             var result = 0;
+            var consecultiveOnes = 0;
 
-            for (int i = 0; i < numberBinary.Length; i++)
+
+            foreach (var binaryNumberInChar in binaryNumbers)
             {
-                if (numberBinary[i] == 1)
+                var binaryNumber = Convert.ToInt32(binaryNumberInChar.ToString());
+                
+                if (binaryNumber == 1)
                 {
-                    result += numberBinary[i];
-                    continue;
-                }
+                    consecultiveOnes += binaryNumber;
 
-                else
-                { 
-                    break;
                 }
+      
+            }
 
+
+            while (true)
+            {
 
             }
 
