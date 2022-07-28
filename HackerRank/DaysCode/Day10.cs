@@ -28,39 +28,47 @@ namespace HackerRank.DaysCode
         public void Case01()
         {
 
-            var numberBase10 = Convert.ToInt32(this.console.ReadLine().Trim());            
+            var numberBase10 = Convert.ToInt32(this.console.ReadLine().Trim());
             var binaryNumbers = Convert.ToString(numberBase10, 2);
 
-            var result = 0;
-            var consecultiveOnes = 0;
+            int final_result = ComputeOneSequences(binaryNumbers);
 
-
-            foreach (var binaryNumberInChar in binaryNumbers)
-            {
-                var binaryNumber = Convert.ToInt32(binaryNumberInChar.ToString());
-                
-                if (binaryNumber == 1)
-                {
-                    consecultiveOnes += binaryNumber;
-
-                }
-      
-            }
-
-
-            while (true)
-            {
-
-            }
-
-
-
-
-            this.console.WriteLine(result);
+            //this.console.WriteLine(Math.Max(firstConsecultiveOnes, secondConsecutiveOnes));
+            this.console.WriteLine(final_result);
 
 
         }
 
+        public int ComputeOneSequences(string binaryNumbers)
+        {
+            var result = 0;
+            var final_result = 0;
 
+            foreach (var binaryNumberInChar in binaryNumbers)
+            {
+                var binaryNumber = Convert.ToInt32(binaryNumberInChar.ToString());
+
+                if (binaryNumber == 1)
+                {
+                    result++;
+                }
+                else
+                {
+                    if (final_result < result)
+                    {
+                        final_result = result;
+                    }
+
+                    result = 0;
+                }
+            }
+
+            if (final_result < result)
+            {
+                final_result = result;
+            }
+
+            return final_result;
+        }
     }
 }
